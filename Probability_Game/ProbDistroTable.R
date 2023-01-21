@@ -34,6 +34,9 @@ ggplot(probdistro, aes(x_values, probs)) +
         axis.title=element_text(size=18), 
         plot.title=element_text(size=20)) + 
   
+  # Label each bar with value
+  geom_text(aes(label = probs), vjust = 1.5, colour = "white", size=6) +
+  
   # Add title as desired
   ggtitle('Second Sight Probability Distribution (Theoretical)')
 
@@ -70,6 +73,9 @@ ggplot(probdistro_emp, aes(x_values, probs)) +
   theme(axis.text=element_text(size=14), 
         axis.title=element_text(size=18), 
         plot.title=element_text(size=20)) + 
+  
+  # Label each bar with value
+  geom_text(aes(label = round(probs, digits=3)), vjust = 1.5, colour = "white", size=6) +
   
   # Add title as desired
   ggtitle('Second Sight Probability Distribution (Empirical)')
