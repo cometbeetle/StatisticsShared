@@ -1,1 +1,16 @@
-# This is an example file where we will store code. 
+---
+title: "Example R Markdown File"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Including Code (Example)
+
+You can include R code in the document as follows:
+
+```{r cars}
+summary(cars)
+```
